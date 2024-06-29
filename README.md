@@ -1,6 +1,7 @@
 # Cocos-3.6.x-playableAds-build-tool
 Cocos 3.6.0 - 3.6.3 playableAds build tool 1 click - Fix ironsource Audio 
 This is a build tool created by ppgee and edited by duxbee. Sincere thanks to you - ppgee. This is a gift from the duxbee to those who deserve to hold it. 
+You can find source in here https://github.com/ppgee/cocos-pnp
 From duxbee was once a legend at company R
 
 
