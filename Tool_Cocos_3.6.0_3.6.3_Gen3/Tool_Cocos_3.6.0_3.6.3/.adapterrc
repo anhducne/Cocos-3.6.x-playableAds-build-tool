@@ -1,0 +1,25 @@
+{
+  "buildPlatform": "web-mobile",
+  "orientation": "auto",
+  "injectOptions": {
+    "IronSource": {
+      "head": "<script>function onReadyCallback(){dapi.removeEventListener('ready',onReadyCallback);dapi.getAudioVolume();dapi.isViewable()&&adVisibleCallback({isViewable:!0}),dapi.addEventListener('viewableChange',adVisibleCallback),dapi.addEventListener('adResized',adResizeCallback),dapi.addEventListener('audioVolumeChange',audioVolumeChangeCallback)}function adVisibleCallback(e){console.log('isViewable '+e.isViewable),window.dapi.addEventListener('audioVolumeChange',audioVolumeChangeCallback),e.isViewable?(screenSize=dapi.getScreenSize(),e.startGame()):e.pauseGame()}function adResizeCallback(e){screenSize=e,console.log('ad was resized width '+e.width+' height '+e.height)}function audioVolumeChangeCallback(e){!!e?window.dispatchEvent(new Event('AudioResume')):window.dispatchEvent(new Event('AudioPause'))}window.addEventListener('load',(function(){dapi.isReady()?onReadyCallback():dapi.addEventListener('ready',onReadyCallback)})); console.log('Made by bee || ig: _.toilacho2105')</script>",
+      "body" : "<script type='text/javascript' charset='utf-8'>var s='';openAdUrl=function(){s=(cc.sys.os==cc.sys.OS_ANDROID||(cc.sys.os,cc.sys.OS_IOS),'');dapi.openStoreUrl(s)};</script><script> NUC.init('PLYType', 'GameName', 'GameType', '1.0.1');</script>"
+    },
+    "Mintegral": {
+      "head": "<script> console.log('Made by bee || ig: _.toilacho2105') </script>",
+      "body": " <script> function gameStart(){} function gameClose(){} </script><script type='text/javascript' charset='utf-8'>openAdUrl=function(){cc.sys.os==cc.sys.OS_ANDROID||(cc.sys.os,cc.sys.OS_IOS),'';window.install&&window.install()};</script>"
+    },
+    "Google": {
+      "body": "<a onclick=\"ExitApi.exit()\" style=\"display: none;\"></a>"
+    },
+    "AppLovin": {
+      "head": "<script>console.log('AppLovin')</script>"
+    },
+    "Unity": {
+      "body": "<script type='text/javascript' charset='utf-8' >var clickTag='',androidLink='IOS LINK HERE',iosLink='IOS LINK HERE',defaultLink='ANDROID LINK HERE';openAdUrl=function(){clickTag=cc.sys.os==cc.sys.OS_ANDROID?androidLink:cc.sys.os==cc.sys.OS_IOS?iosLink:defaultLink;mraid.open(clickTag)};</script><script>if(mraid.getState()==='loading'){mraid.addEventListener('ready',onSdkReady)}else{onSdkReady()}function viewableChangeHandler(viewable){if(viewable){}else{}}function onSdkReady(){mraid.addEventListener('viewableChange',viewableChangeHandler);if(mraid.isViewable()){showMyAd()}}var url='IOS LINK HERE';var android='ANDROID LINK HERE';if(/android/i.test(userAgent)){url=android}function showMyAd(){mraid.open(url)}</script>",
+      "sdkScript": "<script type='text/javascript' charset='utf-8'>(function () {cc.DebugMode = {};cc.DebugMode.INFO = 0;cc.DebugMode.ERROR = 1;})();</script>"
+    }
+  },
+  "exportChannels": ["IronSource", "Mintegral", "AppLovin", "Unity"]
+}
